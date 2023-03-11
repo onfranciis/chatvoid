@@ -1,0 +1,70 @@
+@import "../Theme";
+.ChatCard {
+  @include flex($dir: column);
+
+  max-width: 80%;
+  width: fit-content;
+  padding: 10px 10px;
+  gap: 5px;
+  z-index: 0;
+
+  .Text {
+    width: 100%;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    text-align: left;
+  }
+
+  .Time {
+    width: 100%;
+    font-size: 0.75rem;
+    text-align: right;
+  }
+}
+
+.ChatCard1 {
+  align-items: flex-start;
+  background-color: rgb(78, 78, 78);
+  border-radius: 20px 20px 20px 0;
+
+  &:last-of-type {
+    animation: Status 0.3s linear 0s 1 normal;
+  }
+
+  .Text {
+    color: white;
+  }
+
+  .Time {
+    color: rgb(65, 224, 169);
+  }
+}
+
+.ChatCard2 {
+  align-items: flex-end;
+  background-color: rgb(181, 178, 178);
+  border-radius: 20px 20px 0 20px;
+  align-self: flex-end;
+  filter: drop-shadow(0 0 3px black);
+
+  &:last-of-type {
+    animation: Status 0.3s linear 0s 1 normal;
+  }
+
+  .Text {
+    color: black;
+  }
+
+  .Time {
+    color: rgb(42, 137, 104);
+  }
+}
+
+@keyframes Status {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

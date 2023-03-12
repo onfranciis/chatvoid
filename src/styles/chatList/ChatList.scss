@@ -1,0 +1,10 @@
+@import "../Theme";
+
+.ChatList {
+  @include flex($dir: column, $jus: flex-start, $ali: space-between);
+
+  width: 200px;
+  height: 100%;
+  gap: 3px;
+  overflow: scroll;
+}

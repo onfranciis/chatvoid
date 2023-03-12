@@ -1,0 +1,28 @@
+@import "../Theme";
+
+.AddNewChat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  p,
+  input {
+    width: 100%;
+    color: white;
+    background-color: $primary;
+    font-size: 20px;
+    border: none;
+    border-color: $primary;
+    align-self: stretch;
+    padding: 5px 8px;
+    text-align: center;
+    caret-color: #50b0a2e8;
+    accent-color: black;
+  }
+}

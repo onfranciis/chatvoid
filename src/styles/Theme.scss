@@ -1,0 +1,10 @@
+$primary: #209886;
+$white: white;
+$black: black;
+
+@mixin flex($dir: row, $jus: center, $ali: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $ali;
+}

@@ -1,0 +1,47 @@
+@import "../Theme";
+
+.ChatListCard {
+  min-height: 50px;
+  background-color: rgba(255, 255, 255, 0.212);
+  color: white;
+  padding: 5px;
+  position: relative;
+  cursor: default;
+  transition: border 0.2s;
+
+  &:hover {
+    border-left: 6px solid $primary;
+  }
+
+  &.Selected {
+    background-color: #2098868b;
+  }
+
+  .Blur {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff6d;
+    filter: blur(10px);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .Name {
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .Message {
+    width: 60%;
+    color: #00ffd9e8;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

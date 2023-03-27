@@ -4,13 +4,14 @@ import Notification from "./Notification";
 import { useSelector } from "react-redux";
 import { nanoid } from "nanoid";
 import { usersStateType } from "../../redux/users/usersTypes";
+import store from "../../redux/store";
+const { getState } = store;
 
 const ChatBody = () => {
   const Key = useId();
-  const useSelectorUsers: usersStateType = useSelector(
-    (state: any) => state?.users
+  const chatData = useSelector(
+    (state: ReturnType<typeof getState>) => state?.users.users[0]
   );
-  const chatData = useSelectorUsers.users[0];
 
   return (
     <div className="ChatBody">

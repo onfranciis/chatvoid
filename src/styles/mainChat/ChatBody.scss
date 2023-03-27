@@ -1,14 +1,16 @@
 @import "../Theme";
 
 .ChatBody {
-  @include flex($dir: column, $jus: flex-start, $ali: space-between);
-
   height: 100%;
   width: 100%;
   background-color: #20988629;
-  gap: 5px;
   overflow: scroll;
   padding: 10px;
+
+  .Chat {
+    @include flex($dir: column, $jus: flex-start, $ali: space-between);
+    gap: 5px;
+  }
 }
 
 .EmptyBottom {

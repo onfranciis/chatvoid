@@ -23,13 +23,13 @@ export const usersSlice = createSlice({
 
     ADD_NEW_USER: (state, action: usersActionType) => {
       state.users.push({
-        id: "",
+        id: action.payload.id,
         joined: JSON.stringify(moment()),
         lastseen: JSON.stringify(moment()),
         read: false,
         typing: false,
-        username: "",
-        messages: [{ day: "", chats: [{ ...action.payload }] }],
+        username: action.payload.message,
+        messages: [],
       });
     },
   },

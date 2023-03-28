@@ -16,11 +16,11 @@ const Input = () => {
   };
 
   const handleSend = () => {
-    dispatch(ADD_NEW_USER(dispatchBody));
+    dispatch(SAME_DAY(dispatchBody));
   };
 
   const handleSend2 = () => {
-    dispatch(SAME_DAY(dispatchBody));
+    dispatch(NEW_CHAT(dispatchBody));
   };
 
   return (

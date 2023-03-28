@@ -1,8 +1,13 @@
-const ChatListCard = () => {
+type ChatListCardPropType = {
+  Name: string;
+  LastMessage: string;
+};
+
+const ChatListCard = ({ Name, LastMessage }: ChatListCardPropType) => {
   return (
     <div className="ChatListCard">
-      <p className="Name">John Doe</p>
-      <p className="Message">Lorem Ipsum</p>
+      <p className="Name">{Name}</p>
+      <p className="Message">{LastMessage}</p>
     </div>
   );
 };

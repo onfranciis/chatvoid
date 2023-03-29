@@ -7,16 +7,18 @@ export interface chatType {
 
 export type userMessagesType = { day: string; chats: chatType[] }[];
 
+export type usersType = {
+  id: string;
+  username: string;
+  joined: string;
+  lastseen: string;
+  read: boolean;
+  typing: boolean;
+  messages: userMessagesType;
+};
+
 export interface usersStateType {
-  users: {
-    id: string;
-    username: string;
-    joined: string;
-    lastseen: string;
-    read: boolean;
-    typing: boolean;
-    messages: userMessagesType;
-  }[];
+  users: usersType[];
 }
 
 export interface usersActionType {

@@ -17,6 +17,7 @@ const ChatList = () => {
         <ChatListCard
           key={nanoid()}
           Name={chat.username}
+          Chat={chat}
           LastMessage={
             chat?.messages[chat.messages.length - 1]?.chats[
               chat.messages[chat.messages.length - 1].chats.length - 1

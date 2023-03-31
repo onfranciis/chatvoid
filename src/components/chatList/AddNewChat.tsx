@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, FocusEvent, KeyboardEvent, useState } from "react";
 import { useDispatch } from "react-redux";
 import { ADD_NEW_USER } from "../../redux/users/usersSlice";
 import { nanoid } from "nanoid";
@@ -22,17 +22,31 @@ const AddNewChat = () => {
     setUserName("New User");
   };
 
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserName(e.currentTarget.value);
+  };
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key == "Enter") {
+      handleSubmit();
+    }
+  };
+
+  const handleFocus = (e: FocusEvent<HTMLInputElement, Element>) => {
+    e.target.select();
+  };
+
   return (
     <div className="AddNewChat">
       {editMode ? (
         <input
           type="text"
           value={userName}
-          onChange={(e) => {
-            setUserName(e.currentTarget.value);
-          }}
+          onChange={handleOnChange}
           autoFocus
           onBlur={handleSubmit}
+          onKeyDown={handleKeyDown}
+          onFocus={handleFocus}
         />
       ) : (
         <p

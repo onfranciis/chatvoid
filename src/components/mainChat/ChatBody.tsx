@@ -12,21 +12,29 @@ const ChatBody = () => {
     (state: ReturnType<typeof getState>) => state?.util?.selectedMessage
   );
   const chatData = useSelector((state: ReturnType<typeof getState>) =>
-    selectedMessage ? state?.users?.users[selectedMessage] : null
+    selectedMessage !== null ? state?.users?.users[selectedMessage] : null
   );
 
   return (
     <div className="ChatBody">
       {chatData?.messages?.map((message) => (
-        <div className="Chat">
-          <Notification key={message.day} />
-          {message?.chats?.map((chat) => (
-            <ChatCard1
-              key={`${Key}-$${nanoid()}`}
-              body={chat.message}
-              time={chat.time}
-            />
-          ))}
+        <div className="Chat" key={message.day}>
+          <Notification Message={message.day} />
+          {message?.chats?.map((chat) =>
+            chat?.type == 1 ? (
+              <ChatCard1
+                key={`${Key}-$${nanoid()}`}
+                body={chat.message}
+                time={chat.time}
+              />
+            ) : (
+              <ChatCard2
+                key={`${Key}-$${nanoid()}`}
+                body={chat.message}
+                time={chat.time}
+              />
+            )
+          )}
         </div>
       ))}
 

@@ -9,7 +9,8 @@
 
   .Chat {
     @include flex($dir: column, $jus: flex-start, $ali: space-between);
-    gap: 5px;
+    gap: 10px;
+    padding: 10px 0 0;
   }
 }
 

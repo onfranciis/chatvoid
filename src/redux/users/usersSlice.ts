@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { usersStateType, usersActionType } from "./usersTypes";
+import { usersStateType, usersActionType, addNewUserType } from "./usersTypes";
 import moment from "moment";
 
 export const usersSlice = createSlice({
@@ -9,19 +9,19 @@ export const usersSlice = createSlice({
   },
   reducers: {
     SAME_DAY: (state, action: usersActionType) => {
-      state.users[0].messages[0].chats.push(action.payload);
+      state.users[action.payload.selectedMessageIndex].messages
+        .slice(-1)[0]
+        .chats.push(action.payload.mainData);
     },
 
     NEW_CHAT: (state, action: usersActionType) => {
-      state.users[state.users.length - 1].messages = [
-        {
-          day: action.day!,
-          chats: [{ ...action.payload }],
-        },
-      ];
+      state.users[action.payload.selectedMessageIndex].messages.push({
+        day: JSON.stringify(moment()),
+        chats: [{ ...action.payload.mainData }],
+      });
     },
 
-    ADD_NEW_USER: (state, action: usersActionType) => {
+    ADD_NEW_USER: (state, action: addNewUserType) => {
       state.users.push({
         id: action.payload.id,
         joined: JSON.stringify(moment()),

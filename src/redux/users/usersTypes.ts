@@ -21,7 +21,13 @@ export interface usersStateType {
   users: usersType[];
 }
 
-export interface usersActionType {
+export interface addNewUserType {
   payload: chatType;
-  day?: string;
+}
+
+export interface usersActionType {
+  payload: {
+    mainData: chatType;
+    selectedMessageIndex: number;
+  };
 }

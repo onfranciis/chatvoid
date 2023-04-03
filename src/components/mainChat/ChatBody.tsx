@@ -4,6 +4,7 @@ import Notification from "./Notification";
 import { useSelector } from "react-redux";
 import { nanoid } from "nanoid";
 import store from "../../redux/store";
+import EmptyChat from "./EmptyChat";
 const { getState } = store;
 
 const ChatBody = () => {
@@ -43,6 +44,7 @@ const ChatBody = () => {
         </div>
       ))}
 
+      {chatData?.messages.length == 0 && <EmptyChat />}
       <div className="EmptyBottom" ref={EmptyBottomRef}></div>
     </div>
   );

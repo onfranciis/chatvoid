@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useEffect, useId, useRef } from "react";
 import { ChatCard1, ChatCard2 } from "./ChatCard";
 import Notification from "./Notification";
 import { useSelector } from "react-redux";
@@ -8,12 +8,17 @@ const { getState } = store;
 
 const ChatBody = () => {
   const Key = useId();
+  const EmptyBottomRef = useRef<HTMLDivElement>(null);
   const selectedMessage = useSelector(
     (state: ReturnType<typeof getState>) => state?.util?.selectedMessage
   );
   const chatData = useSelector((state: ReturnType<typeof getState>) =>
     selectedMessage !== null ? state?.users?.users[selectedMessage] : null
   );
+
+  useEffect(() => {
+    EmptyBottomRef.current?.scrollIntoView();
+  }, [chatData]);
 
   return (
     <div className="ChatBody">
@@ -38,7 +43,7 @@ const ChatBody = () => {
         </div>
       ))}
 
-      <div className="EmptyBottom"></div>
+      <div className="EmptyBottom" ref={EmptyBottomRef}></div>
     </div>
   );
 };

@@ -1,7 +1,51 @@
 @import "../Theme";
+
 .MainChat {
   @include flex($dir: column);
 
   height: 100%;
   width: 100%;
+}
+
+.EmptyUser {
+  height: 100%;
+  width: 100%;
+  background-color: #209886;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .Blob {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  p {
+    color: white;
+    text-shadow: 0 0 5px #000000e8;
+    font-weight: bold;
+    z-index: 2;
+    font-size: 1.4rem;
+    text-align: center;
+
+    span {
+      background-color: #fff;
+      color: #209886e8;
+      text-shadow: none;
+      white-space: nowrap;
+      border-radius: 8px;
+      filter: drop-shadow(0 0 3px black);
+      padding: 0 10px;
+      margin: 0 3px;
+    }
+  }
 }

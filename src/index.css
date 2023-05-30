@@ -7,4 +7,6 @@
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 0.5px;
 }

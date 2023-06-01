@@ -3,13 +3,16 @@
   padding: 10px;
   display: flex;
   accent-color: rgba(255, 255, 255, 0) !important;
-  background-color: white;
+  // background-color: white;
   z-index: 1;
 
   textarea,
   input {
     width: 100%;
     height: max-content;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    letter-spacing: 1px;
     word-wrap: break-word;
     border: 1px solid black;
     padding: 10px;

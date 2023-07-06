@@ -44,7 +44,7 @@ const AddNewChat = () => {
           value={userName}
           onChange={handleOnChange}
           autoFocus
-          onBlur={handleSubmit}
+          onBlur={() => setEditMode(false)}
           onKeyDown={handleKeyDown}
           onFocus={handleFocus}
         />

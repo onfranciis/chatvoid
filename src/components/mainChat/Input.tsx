@@ -41,6 +41,8 @@ const Input = () => {
    */
 
   const handleSend = (type: number): void => {
+    if (message.trim() == "") return;
+
     if (selectedMessageIndex !== null) {
       if (
         moment(parsedCurrentChatDay).format("YYYY-MM-DD") ==

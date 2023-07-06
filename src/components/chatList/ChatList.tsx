@@ -3,6 +3,7 @@ import AddNewChat from "./AddNewChat";
 import ChatListCard from "./ChatListCard";
 import store from "../../redux/store";
 import { nanoid } from "nanoid";
+import OnlineCard from "./OnlineCard";
 const { getState } = store;
 
 const ChatList = () => {
@@ -13,6 +14,8 @@ const ChatList = () => {
   return (
     <div className="ChatList">
       <AddNewChat />
+      <OnlineCard />
+
       {Chats.map((chat) => (
         <ChatListCard
           key={nanoid()}

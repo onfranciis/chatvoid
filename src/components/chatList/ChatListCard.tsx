@@ -19,7 +19,12 @@ const ChatListCard = ({ Name, LastMessage, Chat }: ChatListCardPropType) => {
   );
 
   const handleClick = () => {
-    dispatch(SET_SELECTED_MESSAGE(selectedMessageIndex));
+    dispatch(
+      SET_SELECTED_MESSAGE({
+        selectedMessagePayload: selectedMessageIndex,
+        modePayload: 0,
+      })
+    );
   };
 
   return (

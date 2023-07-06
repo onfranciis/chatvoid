@@ -1,0 +1,7 @@
+@import "../Theme";
+
+.OnlineChat {
+  @include flex($dir: column);
+  align-self: stretch;
+  flex: 1;
+}

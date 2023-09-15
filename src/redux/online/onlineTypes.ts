@@ -6,4 +6,5 @@ export interface OnlineChatType {
 
 export interface OnlineInitialState {
   messages: OnlineChatType[];
+  numberOfUsers: number;
 }

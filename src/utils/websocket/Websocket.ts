@@ -1,16 +1,11 @@
-import useHandleMessage from "./handleMessage";
-
-export const ws = new WebSocket("ws://localhost:5050");
+import { ws } from "../../App";
 
 const useWebsocketHandler = () => {
-  useHandleMessage();
-  const { readyState } = ws;
-
-  const sendMessage = () => {
+  const sendMessage = (message: string) => {
     ws.send(
       JSON.stringify({
-        name: "John",
-        message: "Lorem Ipsum",
+        message,
+        type: "message",
       })
     );
   };

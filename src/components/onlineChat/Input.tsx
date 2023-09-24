@@ -10,9 +10,11 @@ const Input = () => {
   const { sendMessage } = useWebsocketHandler();
 
   const handleSend = (): void => {
-    dispatch(SEND_MESSAGE(message));
-    sendMessage(message);
-    setMessage("");
+    if (message.trim() !== "") {
+      dispatch(SEND_MESSAGE(message));
+      sendMessage(message);
+      setMessage("");
+    }
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {

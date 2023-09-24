@@ -4,9 +4,10 @@ import { SET_ONLINE } from "../../redux/util/utilSlice";
 const { getState } = store;
 
 const OnlineCard = () => {
-  const numberOfUsers = useSelector(
-    (state: ReturnType<typeof getState>) => state?.online.numberOfUsers
+  const users = useSelector(
+    (state: ReturnType<typeof getState>) => state?.online.users
   );
+  const numberOfUsers = Object.keys(users).length;
   const dispatch = useDispatch();
 
   const handleClick = () => {

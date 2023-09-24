@@ -1,25 +1,33 @@
 import moment from "moment";
+import { OnlineChatType } from "../../redux/online/onlineTypes";
 
 type ChatCardPropType = {
-  body: string;
-  time: string;
+  Data: OnlineChatType;
 };
 
-export const ChatCard1 = ({ body, time }: ChatCardPropType) => {
+export const ChatCard1 = ({ Data }: ChatCardPropType) => {
   return (
     <div className={`ChatCard ChatCard1 `}>
-      <p className="Name">John Doe</p>
-      <p className="Text">{body.trim()}</p>
-      <p className="Time">{moment(JSON.parse(time)).format("h:mma")}</p>
+      <p className="Name">{Data.user}</p>
+      <p className="Text">{Data.message.trim()}</p>
+      <p className="Time">{moment(JSON.parse(Data.time)).format("h:mma")}</p>
     </div>
   );
 };
 
-export const ChatCard2 = ({ body, time }: ChatCardPropType) => {
+export const ChatCard2 = ({ Data }: ChatCardPropType) => {
   return (
     <div className={`ChatCard ChatCard2 `}>
-      <p className="Text">{body.trim()}</p>
-      <p className="Time">{moment(JSON.parse(time)).format("h:mma")}</p>
+      <p className="Text">{Data.message.trim()}</p>
+      <p className="Time">{moment(JSON.parse(Data.time)).format("h:mma")}</p>
+    </div>
+  );
+};
+
+export const Notification = ({ Data }: ChatCardPropType) => {
+  return (
+    <div className={`OnlineNotification `}>
+      <p className="Text">{Data.message.trim()}</p>
     </div>
   );
 };

@@ -14,6 +14,7 @@ import "../styles/mainChat/ChatBodyExtra.scss";
 import "../styles/onlineChat/OnlineChat.scss";
 import "../styles/onlineChat/Header.scss";
 import "../styles/onlineChat/ChatBody.scss";
+import "../styles/onlineChat/ChatBodyExtra.scss";
 import "../styles/onlineChat/ChatCard.scss";
 import "../styles/onlineChat/Input.scss";
 

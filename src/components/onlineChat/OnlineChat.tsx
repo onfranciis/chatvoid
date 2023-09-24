@@ -3,20 +3,15 @@ import ChatBody from "./ChatBody";
 import Header from "./Header";
 import Input from "./Input";
 import store from "../../redux/store";
-import EmptyUser from "./EmptyUser";
-import useWebsocketHandler from "../../utils/websocket/Websocket";
 const { getState } = store;
 
-const MainChat = () => {
-  useWebsocketHandler();
+const OnlineChat = () => {
   const selectedMessage = useSelector(
     (state: ReturnType<typeof getState>) => state?.util.selectedMessage === null
   );
 
-  return selectedMessage ? (
-    <EmptyUser />
-  ) : (
-    <div className="MainChat">
+  return (
+    <div className="OnlineChat">
       <Header />
       <ChatBody />
       <Input />
@@ -24,4 +19,4 @@ const MainChat = () => {
   );
 };
 
-export default MainChat;
+export default OnlineChat;

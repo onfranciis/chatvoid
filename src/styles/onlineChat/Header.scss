@@ -1,0 +1,35 @@
+@import "../Theme";
+.Header {
+  @include flex($dir: column, $jus: flex-start, $ali: flex-start);
+
+  min-height: 60px;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  text-align: left;
+  padding: 10px 0px 10px 20px;
+  z-index: 2;
+
+  .Name {
+    width: 80%;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .Status {
+    width: fit-content;
+    font-size: 0.7rem;
+    animation: Status 0.3s linear 0s 1 normal;
+  }
+}
+
+@keyframes Status {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

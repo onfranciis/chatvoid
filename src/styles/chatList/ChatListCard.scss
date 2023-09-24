@@ -45,3 +45,16 @@
     text-overflow: ellipsis;
   }
 }
+
+.OnlineCard {
+  background-color: rgb(91, 202, 91);
+  padding: 5px;
+
+  &:hover {
+    background-color: rgb(77, 173, 77);
+  }
+
+  span {
+    font-weight: bold;
+  }
+}

@@ -43,9 +43,34 @@
       text-shadow: none;
       white-space: nowrap;
       border-radius: 8px;
-      filter: drop-shadow(0 0 3px black);
-      padding: 5px 10px 0;
+      filter: drop-shadow(0 0 1px black);
+      padding: 3px 10px;
       margin: 0 3px;
+    }
+  }
+
+  .Burger {
+    background-color: white;
+    color: $primary;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 5px;
+    display: none;
+
+    span {
+      width: 20px;
+      height: 3px;
+      display: inline-block;
+      background-color: $primary;
+      border-radius: 2px;
     }
   }
 }

@@ -7,17 +7,21 @@ import EmptyUser from "./EmptyUser";
 import useWebsocketHandler from "../../utils/websocket/Websocket";
 const { getState } = store;
 
-const MainChat = () => {
+interface MainChatPropsType {
+  setDisplay: () => void;
+}
+
+const MainChat = ({ setDisplay }: MainChatPropsType) => {
   useWebsocketHandler();
   const selectedMessage = useSelector(
     (state: ReturnType<typeof getState>) => state?.util.selectedMessage === null
   );
 
   return selectedMessage ? (
-    <EmptyUser />
+    <EmptyUser setDisplay={setDisplay} />
   ) : (
     <div className="MainChat">
-      <Header />
+      <Header setDisplay={setDisplay} />
       <ChatBody />
       <Input />
     </div>

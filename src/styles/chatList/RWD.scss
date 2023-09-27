@@ -1,0 +1,65 @@
+@import "../Theme";
+
+@media screen and (max-width: 300px) {
+  .ChatList {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  * > .Burger {
+    display: flex !important;
+  }
+
+  .ChatList {
+    background-size: cover;
+    background-position: center;
+    // background: url("/Landscape.jpg") rgba(0, 0, 0, 0.577);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    border-right: 2px solid black;
+    transform: translateX(-100%);
+    transition: width 0.3s, transform 0.3s;
+  }
+
+  .toggled {
+    transform: translateX(0%);
+  }
+
+  .AddNewChat {
+    p,
+    input {
+      text-align: left !important;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Input {
+    flex-wrap: wrap;
+    gap: 2px;
+
+    textarea,
+    input {
+      order: 0;
+    }
+
+    button {
+      flex: 1;
+    }
+
+    .Send {
+      order: 1;
+    }
+
+    .Receive {
+      order: 2;
+    }
+  }
+}

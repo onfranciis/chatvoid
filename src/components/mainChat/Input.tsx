@@ -88,7 +88,9 @@ const Input = () => {
 
   return (
     <div className="Input">
-      <button onClick={handleSend2}>Receive</button>
+      <button className="Receive" onClick={handleSend2}>
+        Receive
+      </button>
 
       <textarea
         name="message"
@@ -100,7 +102,9 @@ const Input = () => {
         ref={TextAreaRef}
       ></textarea>
 
-      <button onClick={() => handleSend(2)}>Send</button>
+      <button className="Send" onClick={() => handleSend(2)}>
+        Send
+      </button>
     </div>
   );
 };

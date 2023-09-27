@@ -8,9 +8,15 @@ type ChatListCardPropType = {
   Name: string;
   LastMessage: string;
   Chat: usersType;
+  setDisplay: () => void;
 };
 
-const ChatListCard = ({ Name, LastMessage, Chat }: ChatListCardPropType) => {
+const ChatListCard = ({
+  Name,
+  LastMessage,
+  Chat,
+  setDisplay,
+}: ChatListCardPropType) => {
   const dispatch = useDispatch();
   const selectedMessageIndex = useSelector(
     (state: ReturnType<typeof getState>) => {
@@ -25,6 +31,7 @@ const ChatListCard = ({ Name, LastMessage, Chat }: ChatListCardPropType) => {
         modePayload: 0,
       })
     );
+    setDisplay();
   };
 
   return (

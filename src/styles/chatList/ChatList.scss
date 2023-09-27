@@ -10,4 +10,7 @@
   border-right: 5px solid $primary;
   gap: 3px;
   overflow: scroll;
+  transition: transition 0.2s;
 }
+
+@import "./RWD.scss";

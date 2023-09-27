@@ -2,7 +2,11 @@ import { useSelector } from "react-redux";
 import store from "../../redux/store";
 const { getState } = store;
 
-const Header = () => {
+interface HeaderPropsType {
+  setDisplay: () => void;
+}
+
+const Header = ({ setDisplay }: HeaderPropsType) => {
   const selectedMessageIndex = useSelector(
     (state: ReturnType<typeof getState>) => state.util.selectedMessage
   );
@@ -15,8 +19,16 @@ const Header = () => {
 
   return (
     <div className="Header">
-      <p className="Name">{selectedMessage?.username}</p>
-      <p className="Status">{selectedMessage?.typing}</p>
+      <button className="Burger" onClick={setDisplay}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div className="Info">
+        <p className="Name">{selectedMessage?.username}</p>
+        <p className="Status">{selectedMessage?.typing}</p>
+      </div>
     </div>
   );
 };

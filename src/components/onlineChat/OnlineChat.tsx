@@ -5,14 +5,18 @@ import Input from "./Input";
 import store from "../../redux/store";
 const { getState } = store;
 
-const OnlineChat = () => {
+interface OnlineChatPropsType {
+  setDisplay: () => void;
+}
+
+const OnlineChat = ({ setDisplay }: OnlineChatPropsType) => {
   const selectedMessage = useSelector(
     (state: ReturnType<typeof getState>) => state?.util.selectedMessage === null
   );
 
   return (
     <div className="OnlineChat">
-      <Header />
+      <Header setDisplay={setDisplay} />
       <ChatBody />
       <Input />
     </div>

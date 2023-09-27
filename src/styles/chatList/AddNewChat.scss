@@ -25,4 +25,28 @@
     caret-color: #50b0a2e8;
     accent-color: black;
   }
+
+  .Burger {
+    background-color: white;
+    height: 100%;
+    color: $primary;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border: none;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    display: none;
+
+    span {
+      width: 20px;
+      height: 3px;
+      display: inline-block;
+      background-color: $primary;
+      border-radius: 2px;
+    }
+  }
 }

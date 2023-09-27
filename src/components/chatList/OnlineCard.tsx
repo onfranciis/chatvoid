@@ -3,7 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { SET_ONLINE } from "../../redux/util/utilSlice";
 const { getState } = store;
 
-const OnlineCard = () => {
+interface OnlineCardPropsType {
+  setDisplay: () => void;
+}
+
+const OnlineCard = ({ setDisplay }: OnlineCardPropsType) => {
   const users = useSelector(
     (state: ReturnType<typeof getState>) => state?.online.users
   );
@@ -12,6 +16,7 @@ const OnlineCard = () => {
 
   const handleClick = () => {
     dispatch(SET_ONLINE());
+    setDisplay()
   };
 
   return (

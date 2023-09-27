@@ -14,5 +14,20 @@ body {
   background-image: url("/Landscape.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #29976f;
+  border-radius: 0px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #6ab398;
 }

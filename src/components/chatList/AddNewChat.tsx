@@ -4,7 +4,11 @@ import { ADD_NEW_USER } from "../../redux/users/usersSlice";
 import { nanoid } from "nanoid";
 import moment from "moment";
 
-const AddNewChat = () => {
+interface AddNewChatPropsType {
+  setDisplay: () => void;
+}
+
+const AddNewChat = ({ setDisplay }: AddNewChatPropsType) => {
   const [userName, setUserName] = useState<string>("New User");
   const [editMode, setEditMode] = useState<boolean>(false);
   const dispatch = useDispatch();
@@ -57,6 +61,12 @@ const AddNewChat = () => {
           Add New User
         </p>
       )}
+
+      <button className="Burger" onClick={setDisplay}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   );
 };

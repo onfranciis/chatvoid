@@ -1,14 +1,21 @@
 @import "../Theme";
 .Header {
-  @include flex($dir: column, $jus: flex-start, $ali: flex-start);
+  @include flex();
 
   min-height: 60px;
   width: 100%;
   background-color: $black;
-  color: $white;
-  text-align: left;
   padding: 10px 0px 10px 20px;
   z-index: 2;
+
+  .Info {
+    @include flex($dir: column, $jus: flex-start, $ali: flex-start);
+
+    width: 100%;
+    color: $white;
+    text-align: left;
+    padding: 10px 0px 10px 20px;
+  }
 
   .Name {
     width: 80%;
@@ -22,6 +29,27 @@
     width: fit-content;
     font-size: 0.7rem;
     animation: Status 0.3s linear 0s 1 normal;
+  }
+
+  .Burger {
+    background-color: transparent;
+    color: $primary;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border: none;
+    padding: 5px;
+    display: none;
+
+    span {
+      width: 20px;
+      height: 3px;
+      display: inline-block;
+      background-color: $primary;
+      border-radius: 2px;
+    }
   }
 }
 

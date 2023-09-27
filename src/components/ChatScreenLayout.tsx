@@ -22,6 +22,7 @@ import ChatList from "./chatList/ChatList";
 import MainChat from "./mainChat/MainChat";
 import OnlineChat from "./onlineChat/OnlineChat";
 
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import store from "../redux/store";
 const { getState } = store;
@@ -30,11 +31,24 @@ const ChatScreenLayout = () => {
   const mode = useSelector((state: ReturnType<typeof getState>) => {
     return state?.util?.mode;
   });
+  const [display, setDisplay] = useState(true);
 
   return (
     <div className="ChatScreenLayout">
-      <ChatList />
-      {mode == 0 ? <MainChat /> : <OnlineChat />}
+      <ChatList setDisplay={setDisplay} display={display} />
+      {mode == 0 ? (
+        <MainChat
+          setDisplay={() => {
+            setDisplay(true);
+          }}
+        />
+      ) : (
+        <OnlineChat
+          setDisplay={() => {
+            setDisplay(true);
+          }}
+        />
+      )}
     </div>
   );
 };

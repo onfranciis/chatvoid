@@ -1,1 +1,35 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+    "name": "Chatvoid",
+    "short_name": "Chatvoid",
+    "description":"Mimic chats and connect to online chatroom.",
+    "theme_color": "#209886",
+    "background_color": "#ffffff",
+    "start_url":".",
+    "display": "standalone",
+    "categories":["social networking, social, entertainment"],
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts" : [
+  {
+    "name": "Launch app",
+    "url": "/",
+    "description": "Start chatvoid"
+  },
+  {
+    "name": "Source code",
+    "url": "https://www.github.com/onfranciis/chatvoid",
+    "description":"View the code behind this software"
+  }
+ 
+]
+}

@@ -1,9 +1,10 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import AddNewChat from "./AddNewChat";
 import ChatListCard from "./ChatListCard";
 import store from "../../redux/store";
 import { nanoid } from "nanoid";
 import OnlineCard from "./OnlineCard";
+import { SET_SELECTED_MESSAGE } from "../../redux/util/utilSlice";
 const { getState } = store;
 
 interface ChatListPropType {
@@ -12,12 +13,23 @@ interface ChatListPropType {
 }
 
 const ChatList = ({ setDisplay, display }: ChatListPropType) => {
+  const dispatch = useDispatch();
   const Chats = useSelector(
     (state: ReturnType<typeof getState>) => state?.users.users
   );
 
+  const emptyUser = () => {
+    dispatch(
+      SET_SELECTED_MESSAGE({ selectedMessagePayload: null, modePayload: null })
+    );
+  };
+
   return (
     <div className={`ChatList ${display && "toggled"}`}>
+      <div className="Title" onClick={emptyUser}>
+        C<span>hatvoid</span>
+      </div>
+
       <AddNewChat
         setDisplay={() => {
           setDisplay(false);

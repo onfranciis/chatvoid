@@ -7,7 +7,7 @@ type ChatCardPropType = {
 
 export const ChatCard1 = ({ Data }: ChatCardPropType) => {
   return (
-    <div className={`ChatCard ChatCard1 `}>
+    <div className={`OnlineChatCard OnlineChatCard1 `}>
       <p className="Name">{Data.user}</p>
       <p className="Text">{Data.message.trim()}</p>
       <p className="Time">{moment(JSON.parse(Data.time)).format("h:mma")}</p>
@@ -17,7 +17,7 @@ export const ChatCard1 = ({ Data }: ChatCardPropType) => {
 
 export const ChatCard2 = ({ Data }: ChatCardPropType) => {
   return (
-    <div className={`ChatCard ChatCard2 `}>
+    <div className={`OnlineChatCard OnlineChatCard2 `}>
       <p className="Text">{Data.message.trim()}</p>
       <p className="Time">{moment(JSON.parse(Data.time)).format("h:mma")}</p>
     </div>

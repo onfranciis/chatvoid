@@ -6,11 +6,31 @@
   min-width: 200px;
   max-width: 200px;
   height: 100%;
-  // background-color: rgba(0, 0, 0, 0.779);
   border-right: 5px solid $primary;
   gap: 3px;
   overflow: scroll;
-  transition: transition 0.2s;
+  transition: transform 0.2s;
+  z-index: 4;
+
+  .Title {
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    background: -webkit-linear-gradient(#209886, #209886, #00000000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px 2px;
+
+    span {
+      font-size: 1.2rem;
+      // text-decoration: underline;
+      margin-top: 0.25rem;
+    }
+  }
 }
 
 @import "./RWD.scss";

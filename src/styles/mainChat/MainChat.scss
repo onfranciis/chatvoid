@@ -12,8 +12,10 @@
   width: 100%;
   background-color: #209886;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
 
   .Blob {
     width: 200px;
@@ -21,7 +23,7 @@
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease-in-out;
-    position: absolute;
+    margin-top: 100px;
 
     img {
       width: 100%;
@@ -29,24 +31,50 @@
     }
   }
 
-  p {
+  ul {
+    max-width: 90%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  li {
+    width: 100%;
     color: white;
-    text-shadow: 0 0 5px #000000e8;
+    text-shadow: 0 0 1px #000000e8;
     font-weight: bold;
-    z-index: 2;
-    font-size: 1.4rem;
-    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
 
     span {
       background-color: #fff;
       color: #209886e8;
       text-shadow: none;
       white-space: nowrap;
-      border-radius: 8px;
-      filter: drop-shadow(0 0 1px black);
-      padding: 3px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 0px 5px;
       margin: 0 3px;
     }
+
+    .Online {
+      background-color: rgb(38, 148, 38);
+      color: white;
+    }
+  }
+
+  p {
+    width: fit-content;
+    background-color: #fff;
+    color: #209886e8;
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 4px;
+    padding: 0px 5px;
+    margin: 10px 3px;
   }
 
   .Burger {
@@ -59,15 +87,15 @@
     gap: 3px;
     border: none;
     border-radius: 5px;
+    display: none;
     position: absolute;
     left: 10px;
     top: 10px;
-    padding: 5px;
-    display: none;
+    padding: 7px 5px;
 
     span {
-      width: 20px;
-      height: 3px;
+      width: 25px;
+      height: 4px;
       display: inline-block;
       background-color: $primary;
       border-radius: 2px;

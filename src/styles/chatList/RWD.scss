@@ -22,10 +22,18 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 3;
     border-right: 2px solid black;
     transform: translateX(-100%);
     transition: width 0.3s, transform 0.3s;
+  }
+
+  .ChatListAfter {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
   }
 
   .toggled {

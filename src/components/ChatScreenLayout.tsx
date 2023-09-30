@@ -36,6 +36,10 @@ const ChatScreenLayout = () => {
   return (
     <div className="ChatScreenLayout">
       <ChatList setDisplay={setDisplay} display={display} />
+      {display && (
+        <div className="ChatListAfter" onClick={() => setDisplay(false)}></div>
+      )}
+
       {mode == 0 ? (
         <MainChat
           setDisplay={() => {

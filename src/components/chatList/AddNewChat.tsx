@@ -51,9 +51,12 @@ const AddNewChat = ({ setDisplay }: AddNewChatPropsType) => {
           onBlur={() => setEditMode(false)}
           onKeyDown={handleKeyDown}
           onFocus={handleFocus}
+          enterKeyHint="send"
+          data-testid="AddNewChatInput"
         />
       ) : (
         <p
+          data-testid="AddNewChatButton"
           onClick={() => {
             setEditMode(true);
           }}

@@ -5,7 +5,7 @@
 # Chatvoid
 
 <b> Mimic chats of users through one keyboard </b>
-This web based application let's users mimic coversations by providing them the ability to send and receive messages through one input.
+This web based application let's users mimic coversations by providing them the ability to send and receive messages through one input. It now supports an anonymous online chatroom.
 
 This is built using
 

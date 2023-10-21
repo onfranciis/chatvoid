@@ -24,10 +24,17 @@
     text-align: center;
     caret-color: #50b0a2e8;
     accent-color: black;
+    padding-right: 40px;
+
+    &::selection {
+      background-color: rgb(71, 71, 71);
+      color: white;
+    }
   }
 
   .Burger {
     background-color: white;
+    width: 27px;
     height: 85%;
     color: $primary;
     font-weight: bold;
@@ -43,11 +50,19 @@
     padding: 5px;
 
     span {
-      width: 23px;
+      width: 20px;
       height: 3px;
-      display: inline-block;
+      position: absolute;
       background-color: $primary;
       border-radius: 2px;
+    }
+
+    span:nth-child(1) {
+      transform: rotateZ(45deg);
+    }
+
+    span:nth-child(2) {
+      transform: rotateZ(-45deg);
     }
   }
 }

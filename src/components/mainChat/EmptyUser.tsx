@@ -1,8 +1,18 @@
+import { useDispatch } from "react-redux";
+import { SET_ONLINE } from "../../redux/util/utilSlice";
+
 interface EmptyUserPropsType {
   setDisplay: () => void;
 }
 
 const EmptyUser = ({ setDisplay }: EmptyUserPropsType) => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    // setDisplay();
+    dispatch(SET_ONLINE());
+  };
+
   return (
     <div className="EmptyUser">
       <button className="Burger" onClick={setDisplay}>
@@ -27,12 +37,15 @@ const EmptyUser = ({ setDisplay }: EmptyUserPropsType) => {
 
           <li>
             To chat with other anonymous users, click{" "}
-            <span onClick={setDisplay} className="Online">
+            <span onClick={handleClick} className="Online">
               Online users
             </span>
           </li>
 
-          <p>You can now send and receive messages</p>
+          <p>
+            <img src="/info.svg" alt="Info" /> You can now send and receive
+            messages
+          </p>
         </ul>
       </div>
     </div>

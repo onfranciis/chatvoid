@@ -1,5 +1,14 @@
 @import "../Theme";
 
+@media screen and (max-width: 200px) {
+  .EmptyUser {
+    p {
+      flex-direction: column !important;
+      text-align: center;
+    }
+  }
+}
+
 @media screen and (max-width: 300px) {
   .ChatList {
     min-width: 100%;

@@ -22,6 +22,7 @@ const ChatList = ({ setDisplay, display }: ChatListPropType) => {
     dispatch(
       SET_SELECTED_MESSAGE({ selectedMessagePayload: null, modePayload: null })
     );
+    setDisplay(false);
   };
 
   return (

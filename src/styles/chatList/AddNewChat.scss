@@ -13,6 +13,7 @@
 
   p,
   input {
+    height: 35px;
     width: 100%;
     color: white;
     background-color: $primary;
@@ -24,7 +25,6 @@
     text-align: center;
     caret-color: #50b0a2e8;
     accent-color: black;
-    padding-right: 40px;
 
     &::selection {
       background-color: rgb(71, 71, 71);

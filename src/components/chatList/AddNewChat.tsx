@@ -68,7 +68,6 @@ const AddNewChat = ({ setDisplay }: AddNewChatPropsType) => {
       <button className="Burger" onClick={setDisplay}>
         <span></span>
         <span></span>
-        <span></span>
       </button>
     </div>
   );

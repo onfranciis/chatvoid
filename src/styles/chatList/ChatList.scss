@@ -6,9 +6,10 @@
   min-width: 200px;
   max-width: 200px;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.615);
   border-right: 5px solid $primary;
   gap: 3px;
-  overflow: scroll;
+  overflow-y: scroll;
   transition: transform 0.2s;
   z-index: 4;
 

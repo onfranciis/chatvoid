@@ -10,7 +10,7 @@ body {
   letter-spacing: 0.5px;
   background-size: cover;
   background-position: center;
-  background-image: url("/Landscape.jpg");
+  background-image: url("/public/BG.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

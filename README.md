@@ -37,6 +37,8 @@ yarn dev
 
 <b>:exclamation:PORT 5173 might not be available for you, so check your terminal output to confirm the exposed port.</b>
 
+The backend code can be found on [https://github.com/onfranciis/chatvoid-server](https://github.com/onfranciis/chatvoid-server)
+
 <br>
 
 For enquiries, support or more, contact [hello@onfranciis.dev](mailto:hello@onfranciis.dev)
